@@ -1,0 +1,143 @@
+Package: dash
+Essential: yes
+Status: install ok installed
+Priority: required
+Section: shells
+Installed-Size: 215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.5.7-2ubuntu2
+Depends: debianutils (>= 2.15), dpkg (>= 1.15.0)
+Pre-Depends: libc6 (>= 2.14)
+Description: POSIX-compliant shell
+ The Debian Almquist Shell (dash) is a POSIX-compliant shell derived
+ from ash.
+ .
+ Since it executes scripts faster than bash, and has fewer library
+ dependencies (making it more robust against software or hardware
+ failures), it is used as the default system shell on Debian systems.
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Original-Maintainer: Gerrit Pape <pape@smarden.org>
+
+Package: libsocket6-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 94
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.23-1build2
+Depends: perl (>= 5.14.2-3build1), perlapi-5.14.2, libc6 (>= 2.4), perl-base (>= 5.8.0-10)
+Description: Perl extensions for IPv6
+ This module supports getaddrinfo() and getnameinfo() to intend to enable
+ protocol independent programming. If your environment supports IPv6,
+ IPv6 related defines such as AF_INET6 are included.
+Original-Maintainer: Masahito Omote <omote@debian.org>
+
+Package: libpolkit-gobject-1-0
+Status: install ok installed
+Multi-Arch: same
+Priority: optional
+Section: libs
+Installed-Size: 151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: policykit-1
+Version: 0.104-1ubuntu1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.31.8)
+Pre-Depends: multiarch-support
+Breaks: libpolkit-agent-1-0 (<< 0.99), libpolkit-backend-1-0 (<< 0.99), libpolkit-gtk-1-0 (<< 0.99), policykit-1 (<< 0.99)
+Description: PolicyKit Authorization API
+ PolicyKit is a toolkit for defining and handling the policy that
+ allows unprivileged processes to speak to privileged processes.
+ .
+ This package contains a library for accessing PolicyKit.
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+
+Package: shared-mime-info
+Status: install ok installed
+Multi-Arch: foreign
+Priority: optional
+Section: misc
+Installed-Size: 2504
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1.0-0ubuntu4.1
+Depends: libc6 (>= 2.14), libglib2.0-0 (>= 2.24.0), libxml2 (>= 2.7.4)
+Conflicts: libglib2.0-0 (<< 2.17.2), libgnomevfs2-0 (<< 1:2.24.0), tracker (<< 0.6.90)
+Description: FreeDesktop.org shared MIME database and spec
+ This is the shared MIME-info database from the X Desktop Group. It is required
+ by any program complying to the Shared MIME-Info Database spec, which is also
+ included in this package.
+ .
+ At this time at least ROX, GNOME, KDE and XFCE use this database.
+Homepage: http://freedesktop.org/wiki/Software/shared-mime-info
+Original-Maintainer: Sebastian Dröge <slomo@debian.org>
+
+Package: libjaxen-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 288
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.1.3-1
+Replaces: libsaxpath-java
+Depends: libxerces2-java
+Recommends: libdom4j-java, libjdom1-java, libxom-java
+Conflicts: libsaxpath-java
+Description: Java XPath engine
+ jaxen is a universal object model walker, capable of evaluating XPath
+ expressions across multiple models. Currently supported are dom4j,
+ JDOM, DOM and XOM.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://jaxen.org
+
+Package: libxdmcp6
+Status: install ok installed
+Multi-Arch: same
+Priority: optional
+Section: libs
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: libxdmcp
+Version: 1:1.1.0-4
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Description: X11 Display Manager Control Protocol library
+ This package provides the main interface to the X11 display manager control
+ protocol library, which allows for remote logins to display managers.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXdmcp
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: bsh-gcj
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1682
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: bsh
+Version: 2.0b4-12build1
+Depends: bsh (= 2.0b4-12build1), libgcj-common (>> 1:4.1.1-13), libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libgcj-bc (>= 4.4.5-1~)
+Description: Java scripting environment (BeanShell) Version 2 (native code)
+ BeanShell is a small, free, embeddable, Java source interpreter with object
+ scripting language features, written in Java. BeanShell executes standard Java
+ statements and expressions, in addition to obvious scripting commands and
+ syntax.  BeanShell supports scripted objects as simple method closures like
+ those in Perl and JavaScript(tm).
+ .
+ You can use BeanShell interactively for Java experimentation and debugging or
+ as a simple scripting engine for you applications.  In short: BeanShell is a
+ dynamically interpreted Java, plus some useful stuff.
+ .
+ This package contains the natively compiled code for use by gij.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://www.beanshell.org/
