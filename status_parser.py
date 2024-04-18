@@ -16,7 +16,7 @@ def status_parser(filepath):
     ## Data preparation
     content = open(filepath, 'r').read().split('\n\n')
 
-    list_of_packages = []
+    packages = []
 
     for record in content:
         parsed_record = {}
@@ -67,22 +67,22 @@ def status_parser(filepath):
             else:
                 filtered_record['depends'] = []
 
-        list_of_packages.append(filtered_record)
+        packages.append(filtered_record)
     
     # Check if dependency needs a link on FE and creating one if needed
-    for record in list_of_packages:
+    for record in packages:
         for dependency in record['depends']:
             dependency['link'] = None
-            for package in list_of_packages:
+            for package in packages:
                 if dependency['name'] == package['package']:
                     dependency['link'] = "/package/" + package['package']
                 else: continue
 
     # Calculate reverse dependencies
-    for record in list_of_packages:
+    for record in packages:
         reverseDepsList = []
         
-        for package in list_of_packages:
+        for package in packages:
             for dependency in package['depends']:
                 if dependency and dependency['name'] == record['package']:
                     reverseDepsList.append(package['package'])
@@ -94,6 +94,6 @@ def status_parser(filepath):
         record['reverse'] = reverseDepsList
 
     # Sort package list for FE
-    sorted_list = sorted(list_of_packages, key=lambda x: x['package'])
+    sorted_list = sorted(packages, key=lambda x: x['package'])
     
     return sorted_list

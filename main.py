@@ -1,10 +1,12 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from status_parser import status_parser
-import logging
 from dotenv import load_dotenv
 
-logging.getLogger('flask_cors').level = logging.DEBUG
+load_dotenv()
+
+filepath = os.getenv('FILEPATH', './status')
 
 app = Flask(__name__)
 CORS(app)
@@ -17,7 +19,9 @@ def home():
 def list():
     package_data = status_parser(filepath)
     packages = [x['package'] for x in package_data]
-    return jsonify(packages)
+    if packages:
+        response = jsonify(packages)
+        return response
     
 @app.get('/package/<package_name>')
 def get_package(package_name):
