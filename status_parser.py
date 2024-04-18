@@ -9,6 +9,8 @@ import re
 # I'm skipping parsing of alternates because I'm hitting the time limit, and I am aware that package Descriptions
 # can look rough when concatenated into one string. One possible improvement would be to treat empty lines with dots ' .'
 # as new lines.
+#
+# The example source file is duplicated in this repo.
 
 def status_parser(filepath):
     ## Data preparation
